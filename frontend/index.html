@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI.Gen | Платформа генерации контента</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Floating Background Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div id="app">
+      <!-- Навигация -->
+      <nav class="navbar">
+        <div class="logo">✨ AI.Gen</div>
+        
+        <!-- Burger Menu (Mobile) -->
+        <div class="burger-menu" id="burger-menu">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#" id="link-login">Войти</a>
+          <a href="#" id="link-register" class="btn-primary">Начать бесплатно</a>
+        </div>
+        <div class="nav-user hidden" id="nav-user">
+          <span class="credits-badge">💎 <span id="credits-amount">0</span></span>
+          <a href="#" id="link-dashboard">Дашборд</a>
+          <a href="#" id="link-logout">Выйти</a>
+        </div>
+      </nav>
+
+      <!-- Landing Page -->
+      <section id="page-landing" class="page active">
+        <div class="hero">
+          <div class="badge-new">✨ AI Model 4.0 УЖЕ ДОСТУПНА</div>
+          <h1>Генерируй гениальные посты<br>в <span>один клик</span></h1>
+          <p>Мощный ИИ-копирайтер для твоих соцсетей. Привлекай аудиторию, экономя часы на написание текстов каждый день.</p>
+          <a href="#" class="btn-primary btn-large" id="btn-hero-cta">Попробовать бесплатно</a>
+        </div>
+        
+        <div class="hero-mockup">
+          <img src="/premium_ai_dashboard.png" alt="AI Dashboard Interface" id="hero-img">
+        </div>
+
+        <div class="social-proof">
+          <div class="avatars">
+            <div class="avatar"></div>
+            <div class="avatar"></div>
+            <div class="avatar"></div>
+            <div class="avatar"></div>
+          </div>
+          <p>Более 10,000+ креаторов уже используют AI.Gen</p>
+        </div>
+        
+        <h2 class="section-title">Почему мы?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="icon">🚀</div>
+            <h3>Мгновенный результат</h3>
+            <p>Получите готовый пост за секунды. Никаких ожиданий, просто введите идею и нажмите кнопку.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">🧠</div>
+            <h3>Контекстный интеллект</h3>
+            <p>Наша нейросеть понимает ваш стиль и пишет тексты, которые идеально подходят вашей аудитории.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">📈</div>
+            <h3>Фокус на конверсию</h3>
+            <p>Алгоритмы обучены на миллионах вирусных постов для создания вовлекающего и продающего контента.</p>
+          </div>
+        </div>
+
+        <h2 class="section-title">Тарифы</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Starter</h3>
+            <div class="price">Free<span> / навсегда</span></div>
+            <ul>
+              <li>100 бесплатных кредитов</li>
+              <li>Базовая AI модель</li>
+              <li>Стандартная поддержка</li>
+            </ul>
+            <a href="#" class="btn-secondary" id="btn-price-free">Начать бесплатно</a>
+          </div>
+          <div class="pricing-card popular">
+            <h3>Pro Creator</h3>
+            <div class="price">$19<span> / месяц</span></div>
+            <ul>
+              <li>Безлимитные генерации</li>
+              <li>Доступ к AI Model 4.0</li>
+              <li>Сохранение истории</li>
+              <li>Приоритетная поддержка</li>
+            </ul>
+            <a href="#" class="btn-primary" id="btn-price-pro">Выбрать Pro</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Auth Page -->
+      <section id="page-auth" class="page hidden">
+        <div class="auth-container glass-panel">
+          <h2 id="auth-title">Вход в систему</h2>
+          <form id="auth-form">
+            <div class="input-group">
+              <label>Логин</label>
+              <input type="text" id="auth-username" required placeholder="example_user">
+            </div>
+            <div class="input-group">
+              <label>Пароль</label>
+              <input type="password" id="auth-password" required placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn-primary" id="btn-auth-submit">Войти</button>
+          </form>
+          <p class="auth-switch">Нет аккаунта? <a href="#" id="switch-to-register">Создать аккаунт</a></p>
+        </div>
+      </section>
+
+      <!-- Dashboard Page -->
+      <section id="page-dashboard" class="page hidden">
+        <div class="dashboard-layout">
+          <!-- Main Area -->
+          <div class="generation-panel glass-panel">
+            <h2>Творческая студия</h2>
+            
+            <div class="dashboard-tabs">
+              <button class="tab-btn active" id="tab-text">Текст (10 💎)</button>
+              <button class="tab-btn" id="tab-image">Картинки (20 💎)</button>
+            </div>
+            
+            <textarea id="ai-prompt" placeholder="Опишите, что вы хотите сгенерировать..." rows="4"></textarea>
+            
+            <button class="btn-primary btn-large" id="btn-generate">
+              <span class="icon">✨</span> Сгенерировать
+            </button>
+            
+            <div id="ai-result-container" class="result-box hidden">
+              <button class="copy-btn" id="btn-copy">Копировать</button>
+              <div id="ai-result"></div>
+            </div>
+
+            <div id="ai-image-container" class="image-result-box hidden">
+              <img id="ai-image-result" src="" alt="Generated AI Image" />
+              <a href="#" id="btn-download-img" class="btn-primary" download>Скачать (4K)</a>
+            </div>
+          </div>
+          
+          <!-- Sidebar -->
+          <div class="history-panel glass-panel">
+            <h3>История</h3>
+            <div class="history-list" id="history-list">
+              <!-- History items injected by JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    
+    <!-- Stripe Payment Modal (Mock) -->
+    <div id="stripe-modal" class="modal-overlay hidden">
+      <div class="modal-content glass-panel">
+        <button class="close-btn" id="close-stripe">×</button>
+        <div class="stripe-header">
+          <h3>Оплата подписки</h3>
+          <p>Pro Creator - $19/месяц</p>
+        </div>
+        <div class="stripe-body">
+          <div class="input-group">
+            <label>Номер карты</label>
+            <input type="text" placeholder="•••• •••• •••• ••••" readonly value="4242 4242 4242 4242">
+          </div>
+          <div class="stripe-row">
+            <div class="input-group">
+              <label>Срок</label>
+              <input type="text" placeholder="ММ/ГГ" readonly value="12/28">
+            </div>
+            <div class="input-group">
+              <label>CVC</label>
+              <input type="text" placeholder="123" readonly value="123">
+            </div>
+          </div>
+          <button class="btn-primary" id="btn-pay-now" style="width:100%">Оплатить $19</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toasts -->
+    <div id="toast-container"></div>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+      // Temporary hack to set the hero image path since we'll copy it
+      document.getElementById('hero-img').src = '/premium_ai_dashboard_1785523417033.png';
+    </script>
+  </body>
+</html>

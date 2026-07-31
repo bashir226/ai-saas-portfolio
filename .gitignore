@@ -1,0 +1,22 @@
+# Python / Flask / Backend
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/sql_app.db
+backend/flask.log
+
+# Node.js / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.npm/
+
+# IDE / System
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
