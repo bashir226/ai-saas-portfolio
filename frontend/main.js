@@ -31,10 +31,21 @@ const aiImageContainer = document.getElementById('ai-image-container');
 const aiImageResult = document.getElementById('ai-image-result');
 const btnDownloadImg = document.getElementById('btn-download-img');
 const historyList = document.getElementById('history-list');
+const btnMic = document.getElementById('btn-mic');
+const aiTone = document.getElementById('ai-tone');
+const aiPlatform = document.getElementById('ai-platform');
 
 // Tabs
 const tabText = document.getElementById('tab-text');
 const tabImage = document.getElementById('tab-image');
+
+// Settings Modal
+const settingsModal = document.getElementById('settings-modal');
+const closeSettings = document.getElementById('close-settings');
+const btnSaveSettings = document.getElementById('btn-save-settings');
+const inputOpenaiKey = document.getElementById('input-openai-key');
+const inputNewPassword = document.getElementById('input-new-password');
+const linkSettings = document.getElementById('link-settings');
 
 // Mobile Menu
 const burgerMenu = document.getElementById('burger-menu');
@@ -85,33 +96,27 @@ function updateNav() {
 // --- API Calls ---
 async function fetchMe() {
   const token = localStorage.getItem('token');
-  if (!token) return null;
-
   try {
     const res = await fetch(`${API_URL}/me?token=${token}`);
-    if (!res.ok) {
-      if (res.status === 401) logout();
-      return null;
+    if (res.ok) {
+      const user = await res.json();
+      creditsAmount.textContent = user.credits;
+      // Optional: fill settings inputs if needed, but password/key shouldn't be fully returned
+      return user;
     }
-    const data = await res.json();
-    creditsAmount.textContent = data.credits;
-    return data;
-  } catch (e) {
-    return null;
-  }
+  } catch (e) { console.error(e); }
+  return null;
 }
 
 async function fetchHistory() {
   const token = localStorage.getItem('token');
-  if (!token) return;
-  
   try {
     const res = await fetch(`${API_URL}/history?token=${token}`);
     if (res.ok) {
       const data = await res.json();
-      renderHistory(data);
+      renderHistory(data.history || []);
     }
-  } catch(e) {}
+  } catch (e) { console.error(e); }
 }
 
 function renderHistory(items) {
@@ -123,13 +128,36 @@ function renderHistory(items) {
   
   items.forEach(item => {
     const div = document.createElement('div');
-    div.className = 'history-item';
+    div.className = `history-item ${item.is_favorite ? 'favorite' : ''}`;
     const date = new Date(item.created_at).toLocaleString('ru-RU', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit'});
     
     div.innerHTML = `
       <div class="date">${date}</div>
       <div class="prompt">${item.prompt}</div>
+      <div class="history-actions">
+        <span class="action-icon fav-btn" title="В избранное">${item.is_favorite ? '⭐' : '☆'}</span>
+        <span class="action-icon del-btn" title="Удалить">🗑️</span>
+      </div>
     `;
+    
+    // Actions
+    const favBtn = div.querySelector('.fav-btn');
+    const delBtn = div.querySelector('.del-btn');
+    
+    favBtn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const token = localStorage.getItem('token');
+      await fetch(`${API_URL}/history/${item.id}/favorite?token=${token}`, { method: 'POST' });
+      fetchHistory();
+    });
+    
+    delBtn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const token = localStorage.getItem('token');
+      await fetch(`${API_URL}/history/${item.id}?token=${token}`, { method: 'DELETE' });
+      fetchHistory();
+    });
+    
     div.addEventListener('click', () => {
       if (item.content.startsWith('[IMAGE]')) {
         const url = item.content.replace('[IMAGE] ', '');
@@ -208,13 +236,52 @@ async function typeEffect(element, text, speed = 15) {
   element.classList.remove('typing-cursor');
 }
 
+// Voice Input
+let recognition = null;
+if ('webkitSpeechRecognition' in window) {
+  recognition = new webkitSpeechRecognition();
+  recognition.lang = 'ru-RU';
+  recognition.interimResults = false;
+  
+  recognition.onresult = function(event) {
+    const transcript = event.results[0][0].transcript;
+    promptInput.value += (promptInput.value ? ' ' : '') + transcript;
+    btnMic.classList.remove('recording');
+  };
+  
+  recognition.onerror = function(event) {
+    btnMic.classList.remove('recording');
+    showToast('Ошибка микрофона', 'error');
+  };
+  
+  recognition.onend = function() {
+    btnMic.classList.remove('recording');
+  };
+}
+
+btnMic.addEventListener('click', () => {
+  if (!recognition) {
+    showToast('Ваш браузер не поддерживает голосовой ввод', 'error');
+    return;
+  }
+  if (btnMic.classList.contains('recording')) {
+    recognition.stop();
+  } else {
+    recognition.start();
+    btnMic.classList.add('recording');
+  }
+});
+
 async function handleGenerate(e) {
   e.preventDefault();
   const prompt = promptInput.value.trim();
   if (!prompt) {
-    showToast('Введите тему для поста', 'error');
+    showToast('Напишите запрос', 'error');
     return;
   }
+  
+  const tone = aiTone.value;
+  const platform = aiPlatform.value;
   
   const token = localStorage.getItem('token');
   
@@ -229,7 +296,7 @@ async function handleGenerate(e) {
     const res = await fetch(`${API_URL}${endpoint}?token=${token}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt })
+      body: JSON.stringify({ prompt, tone, platform })
     });
     
     const data = await res.json();
@@ -363,6 +430,41 @@ btnPayNow.addEventListener('click', () => {
 document.getElementById('btn-price-pro').addEventListener('click', (e) => {
   e.preventDefault();
   openStripeModal();
+});
+
+// --- Settings Modal ---
+linkSettings.addEventListener('click', (e) => {
+  e.preventDefault();
+  settingsModal.classList.remove('hidden');
+});
+
+closeSettings.addEventListener('click', () => {
+  settingsModal.classList.add('hidden');
+});
+
+btnSaveSettings.addEventListener('click', async () => {
+  const openai_key = inputOpenaiKey.value.trim();
+  const password = inputNewPassword.value.trim();
+  const token = localStorage.getItem('token');
+  
+  btnSaveSettings.textContent = 'Сохранение...';
+  try {
+    const res = await fetch(`${API_URL}/settings?token=${token}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ openai_key, password })
+    });
+    if (res.ok) {
+      showToast('Настройки сохранены', 'success');
+      settingsModal.classList.add('hidden');
+      inputNewPassword.value = '';
+    } else {
+      showToast('Ошибка сохранения', 'error');
+    }
+  } catch (e) {
+    showToast('Ошибка сети', 'error');
+  }
+  btnSaveSettings.textContent = 'Сохранить изменения';
 });
 
 document.querySelector('.logo').addEventListener('click', (e) => {

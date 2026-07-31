@@ -26,8 +26,9 @@ class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True)
-    password = Column(String) # For a real app, hash this!
-    credits = Column(Integer, default=100) # Give 100 free credits on sign up
+    password = Column(String)
+    credits = Column(Integer, default=100)
+    openai_key = Column(String, nullable=True)
 
 class Post(Base):
     __tablename__ = "posts"
@@ -36,6 +37,7 @@ class Post(Base):
     prompt = Column(String)
     content = Column(String)
     created_at = Column(String)
+    is_favorite = Column(Integer, default=0) # using Integer for SQLite boolean
 
 Base.metadata.create_all(bind=engine)
 
@@ -125,31 +127,43 @@ def generate_content():
     data = request.json
     prompt = data.get("prompt", "")
     
+    tone = data.get("tone", "Professional")
+    platform = data.get("platform", "General")
+    
     COST_PER_GENERATION = 10
-    if user.credits < COST_PER_GENERATION:
-        return jsonify({"detail": "Not enough credits. Please upgrade your plan."}), 402
     
     db = SessionLocal()
     db_user = db.query(User).filter(User.username == user.username).first()
-    db_user.credits -= COST_PER_GENERATION
-    db.commit()
+    
+    # Check if they have their own key
+    user_api_key = db_user.openai_key if db_user.openai_key else OPENAI_API_KEY
+    is_byok = bool(db_user.openai_key)
+    
+    if not is_byok and db_user.credits < COST_PER_GENERATION:
+        db.close()
+        return jsonify({"detail": "Not enough credits. Please upgrade your plan or add your API key in Settings."}), 402
+    
+    if not is_byok:
+        db_user.credits -= COST_PER_GENERATION
+        db.commit()
+        
     remaining = db_user.credits
-    db.close()
     
     # AI Generation Logic (Real OpenAI API with Fallback)
     generated_text = ""
-    if OPENAI_API_KEY:
+    if user_api_key:
         try:
+            prompt_instruction = f"You are a professional social media copywriter. Write a post for {platform}. Tone of voice: {tone}."
             response = requests.post(
                 "https://api.openai.com/v1/chat/completions",
                 headers={
-                    "Authorization": f"Bearer {OPENAI_API_KEY}",
+                    "Authorization": f"Bearer {user_api_key}",
                     "Content-Type": "application/json"
                 },
                 json={
                     "model": "gpt-3.5-turbo",
                     "messages": [
-                        {"role": "system", "content": "You are a professional social media copywriter. Write highly engaging, conversion-focused posts."},
+                        {"role": "system", "content": prompt_instruction},
                         {"role": "user", "content": prompt}
                     ],
                     "max_tokens": 300
@@ -165,7 +179,7 @@ def generate_content():
             
     # Fallback if API key is missing or request failed
     if not generated_text:
-        generated_text = f"✨ [AI MOCK GENERATED] ✨\n\nВот ваш идеальный пост на тему: '{prompt}'.\n\nВ современном мире технологии развиваются с невероятной скоростью. {prompt} - это то, что меняет правила игры каждый день! Не упустите свой шанс быть в тренде. 🚀\n\n#технологии #будущее\n\n(Note: Add OPENAI_API_KEY to .env to use real AI!)"
+        generated_text = f"✨ [AI MOCK GENERATED] ✨\n\nВот ваш идеальный пост ({tone}) для {platform} на тему: '{prompt}'.\n\nВ современном мире технологии развиваются с невероятной скоростью. {prompt} - это то, что меняет правила игры каждый день! Не упустите свой шанс быть в тренде. 🚀\n\n(Note: Add your OpenAI Key in Settings!)"
     
     # Save to history
     db = SessionLocal()
@@ -236,10 +250,69 @@ def get_history():
     posts = db.query(Post).filter(Post.user_id == user.id).order_by(Post.id.desc()).all()
     db.close()
     
-    return jsonify([
-        {"id": p.id, "prompt": p.prompt, "content": p.content, "created_at": p.created_at}
-        for p in posts
-    ])
+    return jsonify({
+        "success": True,
+        "history": [
+            {
+                "id": p.id,
+                "prompt": p.prompt,
+                "content": p.content,
+                "created_at": p.created_at,
+                "is_favorite": bool(p.is_favorite)
+            } for p in posts
+        ]
+    })
+
+@app.route("/api/history/<int:post_id>", methods=["DELETE"])
+def delete_post(post_id):
+    token = request.args.get("token")
+    user = get_current_user(token)
+    if not user:
+        return jsonify({"detail": "Invalid token"}), 401
+        
+    db = SessionLocal()
+    post = db.query(Post).filter(Post.id == post_id, Post.user_id == user.id).first()
+    if post:
+        db.delete(post)
+        db.commit()
+    db.close()
+    return jsonify({"success": True})
+
+@app.route("/api/history/<int:post_id>/favorite", methods=["POST"])
+def toggle_favorite(post_id):
+    token = request.args.get("token")
+    user = get_current_user(token)
+    if not user:
+        return jsonify({"detail": "Invalid token"}), 401
+        
+    db = SessionLocal()
+    post = db.query(Post).filter(Post.id == post_id, Post.user_id == user.id).first()
+    if post:
+        post.is_favorite = 1 if post.is_favorite == 0 else 0
+        db.commit()
+    db.close()
+    return jsonify({"success": True})
+
+@app.route("/api/settings", methods=["POST"])
+def update_settings():
+    token = request.args.get("token")
+    user = get_current_user(token)
+    if not user:
+        return jsonify({"detail": "Invalid token"}), 401
+        
+    data = request.json
+    db = SessionLocal()
+    db_user = db.query(User).filter(User.username == user.username).first()
+    
+    if "openai_key" in data:
+        db_user.openai_key = data["openai_key"] if data["openai_key"].strip() else None
+    
+    if "password" in data and data["password"].strip():
+        db_user.password = data["password"]
+        
+    db.commit()
+    db.close()
+    return jsonify({"success": True})
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8000, debug=True)

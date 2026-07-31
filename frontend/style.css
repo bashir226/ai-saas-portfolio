@@ -536,7 +536,68 @@ textarea { resize: vertical; margin-bottom: 1.5rem; min-height: 120px; }
   .nav-links a, .nav-user a { margin-left: 0; font-size: 1.2rem; }
 }
 
-/*  
+/* --- Phase 3 CSS --- */
+.ai-controls {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+.glass-select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+}
+.glass-select option {
+  background: #111827;
+  color: white;
+}
+.prompt-wrapper {
+  position: relative;
+  width: 100%;
+}
+.mic-btn {
+  position: absolute;
+  right: 15px;
+  bottom: 30px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.mic-btn:hover {
+  transform: scale(1.2);
+}
+.mic-btn.recording {
+  color: red;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.history-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+.action-icon {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+.action-icon:hover {
+  opacity: 1;
+}
+.history-item.favorite {
+  border-left: 3px solid gold;
+  background: rgba(255, 215, 0, 0.05);
+}
  - - -  
  N e w  
  F e a t u r e s  
