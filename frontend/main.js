@@ -479,7 +479,14 @@ document.querySelector('.logo').addEventListener('click', (e) => {
 document.getElementById('link-dashboard').addEventListener('click', async (e) => {
   e.preventDefault();
   const user = await fetchMe();
-  if (user) showPage('dashboard');
+  if (user) {
+    showPage('dashboard');
+    // Reset the UI to feel like a fresh page load
+    promptInput.value = '';
+    aiResultContainer.classList.add('hidden');
+    aiImageContainer.classList.add('hidden');
+    fetchHistory();
+  }
 });
 
 document.getElementById('link-logout').addEventListener('click', logout);
