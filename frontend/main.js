@@ -365,7 +365,11 @@ document.getElementById('link-register').addEventListener('click', (e) => {
 
 document.getElementById('btn-hero-cta').addEventListener('click', (e) => {
   e.preventDefault();
-  isLoginMode = false; updateAuthUI(); showPage('auth');
+  if (localStorage.getItem('token')) {
+    showPage('dashboard');
+  } else {
+    isLoginMode = false; updateAuthUI(); showPage('auth');
+  }
 });
 
 // --- Tabs & UI ---
