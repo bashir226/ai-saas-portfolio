@@ -351,7 +351,19 @@ h1, h2, h3, h4, .logo {
   outline: none;
   border-color: var(--accent-color);
   background: rgba(15, 23, 42, 0.8);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
+.auth-container {
+  max-width: 420px;
+  margin: 6rem auto;
+  position: relative;
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  animation: glowPulse 4s infinite alternate;
+}
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 30px rgba(99, 102, 241, 0.2); }
+  100% { box-shadow: 0 0 50px rgba(168, 85, 247, 0.4); border-color: rgba(168, 85, 247, 0.5); }
 }
 #auth-form .btn-primary { width: 100%; margin-top: 1rem; padding: 1rem; }
 .auth-switch { text-align: center; margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-secondary); }
@@ -393,7 +405,7 @@ textarea { resize: vertical; margin-bottom: 1.5rem; min-height: 120px; }
 }
 .result-box .copy-btn:hover { background: rgba(255, 255, 255, 0.2); }
 
-/* Typing indicator */
+/* Typing indicator & Markdown */
 .typing-cursor::after {
   content: '▋';
   display: inline-block;
@@ -402,6 +414,46 @@ textarea { resize: vertical; margin-bottom: 1.5rem; min-height: 120px; }
   margin-left: 4px;
 }
 @keyframes blink { 50% { opacity: 0; } }
+
+.result-box h1, .result-box h2, .result-box h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+.result-box p {
+  margin-bottom: 1rem;
+}
+.result-box ul, .result-box ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+.result-box li {
+  margin-bottom: 0.5rem;
+}
+.result-box pre {
+  background: #1e1e2e;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.result-box code {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.9em;
+}
+.result-box p code {
+  background: rgba(255,255,255,0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+.result-box blockquote {
+  border-left: 4px solid var(--accent-color);
+  padding-left: 1rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 1rem 0;
+}
 
 /* History Sidebar */
 .history-panel h3 { margin-bottom: 1.5rem; }
@@ -419,6 +471,41 @@ textarea { resize: vertical; margin-bottom: 1.5rem; min-height: 120px; }
 .history-item:hover { background: rgba(255, 255, 255, 0.08); }
 .history-item .date { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 5px; }
 .history-item .prompt { font-weight: 500; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* --- Gallery Page --- */
+.gallery-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 5%;
+}
+.gallery-container h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 10px;
+  gap: 20px;
+}
+.masonry-item {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.masonry-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+.masonry-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 /* --- Toasts --- */
 #toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px;}
@@ -598,9 +685,3 @@ textarea { resize: vertical; margin-bottom: 1.5rem; min-height: 120px; }
   border-left: 3px solid gold;
   background: rgba(255, 215, 0, 0.05);
 }
- - - -  
- N e w  
- F e a t u r e s  
- C S S  
- - - -  
- * /

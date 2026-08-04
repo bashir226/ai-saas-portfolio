@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  username   String   @unique
+  password   String
+  credits    Int      @default(100)
+  openai_key String?
+  posts      Post[]
+}
+
+model Post {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  prompt      String
+  content     String
+  createdAt   DateTime @default(now())
+  isFavorite  Boolean  @default(false)
+  user        User     @relation(fields: [userId], references: [id])
+}

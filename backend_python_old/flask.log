@@ -1,0 +1,260 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-587-679
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:38:12] "[35m[1mPOST /api/register HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:40:03] "OPTIONS /api/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:40:03] "POST /api/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:40:07] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:40:07] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:40:07] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:40:23] "OPTIONS /api/generate?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:40:23] "POST /api/generate?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:41:30] "OPTIONS /api/generate?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:41:30] "POST /api/generate?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:41:33] "POST /api/generate?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:41:38] "OPTIONS /api/generate?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:41:38] "POST /api/generate?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\bashi\\OneDrive\\Документы\\ai-saas\\backend\\main.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-587-679
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:45:36] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:46:18] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:46:18] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-587-679
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:56:58] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:56:59] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:57:01] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:57:05] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:57:21] "OPTIONS /api/generate?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:57:21] "POST /api/generate?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:57:22] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:57:29] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:57:31] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:57:31] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:58:03] "POST /api/register HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:58:03] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:58:03] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0X2ludGVncmF0aW9uX3VzZXIiLCJleHAiOjE3ODU2MTA2ODN9.vazPt-Sf4kS432Pt5rXMns8P2jwukGdYCUmtuBE97Gg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:58:03] "POST /api/generate?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0X2ludGVncmF0aW9uX3VzZXIiLCJleHAiOjE3ODU2MTA2ODN9.vazPt-Sf4kS432Pt5rXMns8P2jwukGdYCUmtuBE97Gg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:59:30] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 21:59:30] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:01:02] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:01:03] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:02:31] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:02:31] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:02:34] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:02:35] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:02:35] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:02:35] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:02:36] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:02:36] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:04:24] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:04:24] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:04:26] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYwOTYwN30.iRlX_yzjuJaS4puZEB5Ztld2sPNZWWkxG-ertrir91A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:04:52] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:04:52] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:04:52] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:04:52] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:04:57] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:04:59] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:05:01] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:19] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:21] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:21] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:21] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:21] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:22] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:22] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:22] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:22] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:23] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:23] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:23] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:28] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:29] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:30] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:30] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:30] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:30] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:31] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:31] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:31] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:32] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:07:32] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\bashi\\OneDrive\\Документы\\ai-saas\\backend\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-587-679
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:11:10] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:11:10] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:12:14] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:12:14] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:12:36] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:12:36] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-587-679
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:18:37] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:18:37] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:18:39] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:18:56] "OPTIONS /api/generate/image?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:18:56] "POST /api/generate/image?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:18:56] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:18:58] "POST /api/generate/image?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:18:58] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:19:05] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:19:05] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMTA5Mn0.T0AjyAx0ntpubUVF8ih5xe1vRe8p6MM1ZkWQAhH3mbs HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\bashi\\OneDrive\\Документы\\ai-saas\\backend\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-587-679
+INFO:werkzeug: * Detected change in 'C:\\Users\\bashi\\OneDrive\\Документы\\ai-saas\\backend\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-587-679
+INFO:werkzeug: * Detected change in 'C:\\Users\\bashi\\OneDrive\\Документы\\ai-saas\\backend\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-587-679
+INFO:werkzeug: * Detected change in 'C:\\Users\\bashi\\OneDrive\\Документы\\ai-saas\\backend\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-587-679
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-587-679
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:21] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:21] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:21] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:21] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:28] "OPTIONS /api/history/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:28] "DELETE /api/history/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:28] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:29] "POST /api/history/1/favorite?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:29] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:30] "POST /api/history/1/favorite?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:30] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:36] "OPTIONS /api/generate/image?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:36] "[31m[1mPOST /api/generate/image?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1[0m" 402 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:52] "OPTIONS /api/generate?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:52] "POST /api/generate?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:38:54] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:39:08] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:39:12] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:39:13] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:41:21] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:41:22] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:41:27] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:41:28] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:41:28] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:41:28] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:42:30] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:42:31] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:42:31] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:42:32] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:42:32] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:42:32] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:42:32] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:42] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:42] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:43] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:43] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:44] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:45] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:45] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:45] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:46] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:46] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:46] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:46] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:46] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:43:46] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 134-587-679
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:06] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:06] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:07] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:07] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:08] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:09] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:09] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:09] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:12] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzEwMX0.yak4g9I6ed4A_NWtnchqp5aqDxabyQ7o1W8aPiu-0PQ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:22] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:22] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:22] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ2Mn0.4VAEysvNlzRzmVsRgrjzcX2nRtwkeqB-tXixdxDMRCY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:22] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ2Mn0.4VAEysvNlzRzmVsRgrjzcX2nRtwkeqB-tXixdxDMRCY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:24] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ2Mn0.4VAEysvNlzRzmVsRgrjzcX2nRtwkeqB-tXixdxDMRCY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:24] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ2Mn0.4VAEysvNlzRzmVsRgrjzcX2nRtwkeqB-tXixdxDMRCY HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:33] "OPTIONS /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:33] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:33] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:33] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:35] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:36] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:36] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:36] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:44:36] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:13] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:13] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:18] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:18] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:21] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:21] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:48] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:48] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:48] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:48] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:48] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:48] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:48] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:48] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:49] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:49] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:49] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:49] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:49] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:49] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:49] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:49] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:50] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:50] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:50] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:46:50] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:37] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:37] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:38] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:38] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:39] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:39] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:53] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:53] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:53] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:53] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:53] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:53] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:54] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:47:54] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:48:02] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:48:02] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:48:05] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:48:05] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:48:06] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:48:06] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:48:08] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:48:08] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:48:11] "GET /api/me?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jul/2026 22:48:11] "GET /api/history?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImV4cCI6MTc4NTYxMzQ3M30.z9OgL7QY4sBb4kOCKsUFqujo3PSJWW9bM5bbkuyajCo HTTP/1.1" 200 -

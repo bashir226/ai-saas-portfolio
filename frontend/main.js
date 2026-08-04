@@ -6,12 +6,14 @@ const API_URL = 'http://127.0.0.1:8000/api';
 const pages = {
   landing: document.getElementById('page-landing'),
   auth: document.getElementById('page-auth'),
-  dashboard: document.getElementById('page-dashboard')
+  dashboard: document.getElementById('page-dashboard'),
+  gallery: document.getElementById('page-gallery')
 };
 
 const navLinks = document.getElementById('nav-links');
 const navUser = document.getElementById('nav-user');
 const creditsAmount = document.getElementById('credits-amount');
+const masonryGrid = document.getElementById('masonry-grid');
 
 // Auth Form
 const authForm = document.getElementById('auth-form');
@@ -34,6 +36,7 @@ const historyList = document.getElementById('history-list');
 const btnMic = document.getElementById('btn-mic');
 const aiTone = document.getElementById('ai-tone');
 const aiPlatform = document.getElementById('ai-platform');
+const aiModel = document.getElementById('ai-model');
 
 // Tabs
 const tabText = document.getElementById('tab-text');
@@ -121,8 +124,10 @@ async function fetchHistory() {
 
 function renderHistory(items) {
   historyList.innerHTML = '';
+  masonryGrid.innerHTML = '';
   if (items.length === 0) {
     historyList.innerHTML = '<p style="color:var(--text-secondary);font-size:0.9rem">История пуста. Создайте свой первый пост!</p>';
+    masonryGrid.innerHTML = '<p style="color:var(--text-secondary);font-size:0.9rem">В галерее пока нет картинок.</p>';
     return;
   }
   
@@ -168,7 +173,8 @@ function renderHistory(items) {
         currentGenMode = 'image';
         updateTabs();
       } else {
-        aiResult.innerHTML = item.content.replace(/\n/g, '<br>');
+        aiResult.innerHTML = marked.parse(item.content);
+        document.querySelectorAll('pre code').forEach((block) => hljs.highlightElement(block));
         aiResultContainer.classList.remove('hidden');
         aiImageContainer.classList.add('hidden');
         currentGenMode = 'text';
@@ -176,6 +182,22 @@ function renderHistory(items) {
       }
     });
     historyList.appendChild(div);
+
+    // If it's an image, also add to masonry gallery
+    if (item.content.startsWith('[IMAGE]')) {
+      const url = item.content.replace('[IMAGE] ', '');
+      const mItem = document.createElement('div');
+      mItem.className = 'masonry-item';
+      mItem.innerHTML = `<img src="${url}" alt="${item.prompt}" title="${item.prompt}">`;
+      mItem.addEventListener('click', () => {
+         // Open image logic or just highlight
+         const a = document.createElement('a');
+         a.href = url;
+         a.download = true;
+         a.click();
+      });
+      masonryGrid.appendChild(mItem);
+    }
   });
 }
 
@@ -282,6 +304,7 @@ async function handleGenerate(e) {
   
   const tone = aiTone.value;
   const platform = aiPlatform.value;
+  const model = aiModel ? aiModel.value : 'gpt-3.5-turbo';
   
   const token = localStorage.getItem('token');
   
@@ -296,29 +319,73 @@ async function handleGenerate(e) {
     const res = await fetch(`${API_URL}${endpoint}?token=${token}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt, tone, platform })
+      body: JSON.stringify({ prompt, tone, platform, model })
     });
     
-    const data = await res.json();
-    
     if (!res.ok) {
+      const data = await res.json();
       showToast(data.detail || 'Ошибка генерации', 'error');
-    } else {
-      creditsAmount.textContent = data.remaining_credits;
-      
-      if (currentGenMode === 'text') {
-        aiResultContainer.classList.remove('hidden');
-        await typeEffect(aiResult, data.result);
-        showToast('-10 💎 списано', 'success');
-      } else {
-        aiImageContainer.classList.remove('hidden');
-        aiImageResult.src = data.result;
-        btnDownloadImg.href = data.result;
-        showToast('-20 💎 списано', 'success');
-      }
-      
-      fetchHistory(); // Refresh history
+      btnGenerate.disabled = false;
+      btnGenerate.innerHTML = '<span class="icon">✨</span> Сгенерировать';
+      return;
     }
+
+    if (currentGenMode === 'image') {
+      const data = await res.json();
+      creditsAmount.textContent = data.remaining_credits;
+      aiImageContainer.classList.remove('hidden');
+      aiImageResult.src = data.result;
+      btnDownloadImg.href = data.result;
+      showToast('-20 💎 списано', 'success');
+      fetchHistory();
+      btnGenerate.disabled = false;
+      btnGenerate.innerHTML = '<span class="icon">✨</span> Сгенерировать';
+      return;
+    }
+
+    // SSE Streaming logic for Text
+    aiResultContainer.classList.remove('hidden');
+    aiResult.innerHTML = '';
+    aiResult.classList.add('typing-cursor');
+    
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder('utf-8');
+    let fullText = '';
+
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      
+      const chunk = decoder.decode(value, { stream: true });
+      const lines = chunk.split('\n');
+      
+      for (const line of lines) {
+        if (line.startsWith('data: ')) {
+          try {
+            const data = JSON.parse(line.substring(6));
+            if (data.type === 'meta') {
+              creditsAmount.textContent = data.remaining_credits;
+              showToast('-10 💎 списано', 'success');
+            } else if (data.type === 'content') {
+              fullText += data.text;
+              // Parse markdown in real-time
+              aiResult.innerHTML = marked.parse(fullText);
+              // Apply syntax highlighting
+              document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+              });
+            } else if (data.type === 'error') {
+              showToast(data.detail, 'error');
+            } else if (data.type === 'done') {
+              fetchHistory();
+            }
+          } catch (e) {
+            // Ignore parse errors on incomplete chunks
+          }
+        }
+      }
+    }
+    aiResult.classList.remove('typing-cursor');
   } catch (e) {
     showToast('Ошибка сети', 'error');
   } finally {
@@ -458,12 +525,22 @@ btnSaveSettings.addEventListener('click', async () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ openai_key, password })
     });
+    
+    if (res.status === 401) {
+      showToast('Сессия устарела. Пожалуйста, войдите заново.', 'error');
+      logout();
+      settingsModal.classList.add('hidden');
+      btnSaveSettings.textContent = 'Сохранить изменения';
+      return;
+    }
+
     if (res.ok) {
       showToast('Настройки сохранены', 'success');
       settingsModal.classList.add('hidden');
       inputNewPassword.value = '';
     } else {
-      showToast('Ошибка сохранения', 'error');
+      const err = await res.json();
+      showToast(err.detail || 'Ошибка сохранения', 'error');
     }
   } catch (e) {
     showToast('Ошибка сети', 'error');
@@ -485,6 +562,15 @@ document.getElementById('link-dashboard').addEventListener('click', async (e) =>
     promptInput.value = '';
     aiResultContainer.classList.add('hidden');
     aiImageContainer.classList.add('hidden');
+    fetchHistory();
+  }
+});
+
+document.getElementById('link-gallery').addEventListener('click', async (e) => {
+  e.preventDefault();
+  const user = await fetchMe();
+  if (user) {
+    showPage('gallery');
     fetchHistory();
   }
 });

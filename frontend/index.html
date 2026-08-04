@@ -7,6 +7,10 @@
     <title>AI.Gen | Платформа генерации контента</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Marked.js & Highlight.js for Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/tokyo-night-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
   </head>
   <body>
     <!-- Floating Background Orbs -->
@@ -30,10 +34,21 @@
         <div class="nav-user hidden" id="nav-user">
           <span class="credits-badge">💎 <span id="credits-amount">0</span></span>
           <a href="#" id="link-dashboard">Дашборд</a>
+          <a href="#" id="link-gallery">Галерея</a>
           <a href="#" id="link-settings">Настройки</a>
           <a href="#" id="link-logout">Выйти</a>
         </div>
       </nav>
+
+      <!-- Gallery Page -->
+      <section id="page-gallery" class="page hidden">
+        <div class="gallery-container">
+          <h2>Мои генерации (Галерея)</h2>
+          <div class="masonry-grid" id="masonry-grid">
+            <!-- Images will be injected here by JS -->
+          </div>
+        </div>
+      </section>
 
       <!-- Landing Page -->
       <section id="page-landing" class="page active">
@@ -134,6 +149,16 @@
               <button class="tab-btn" id="tab-image">Картинки (20 💎)</button>
               
               <div class="ai-controls">
+                <select id="ai-model" class="glass-select">
+                  <option value="claude-3-opus">👑 Claude 3 Opus</option>
+                  <option value="claude-3-5-sonnet">🎭 Claude 3.5 Sonnet</option>
+                  <option value="gpt-4o">🧠 GPT-4o</option>
+                  <option value="gpt-4o-mini">⚡ GPT-4o Mini</option>
+                  <option value="gpt-3.5-turbo">🤖 GPT-3.5 Turbo</option>
+                  <option value="glm-4-flash">💎 GLM-4 Flash (Zhipu)</option>
+                  <option value="glm-4">💎 GLM-4 (Zhipu AI)</option>
+                  <option value="deepseek-chat">🚀 DeepSeek V3</option>
+                </select>
                 <select id="ai-tone" class="glass-select">
                   <option value="Professional">💼 Профессиональный</option>
                   <option value="Casual">😊 Дружелюбный</option>
